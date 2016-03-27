@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   background:rgba(0,0,0, 0.3);
   color: white;
   position: relative;
-  top: 150px;
+  top: 125px;
   padding: 20px;
 }
 .frosty h1 {
@@ -54,4 +54,8 @@ h1, h2, h3, h4, h5, h6, .navbar {
 }
 .btn-success:focus:hover {
 	background-color: #CCB678
+}
+body {
+	background: url('halftone.png');
+	font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
