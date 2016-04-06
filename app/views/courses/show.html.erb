@@ -2,22 +2,18 @@
 
 <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1><%= @course.title %></h1>
+
+  <div class="col-sm-8 col-xs-12">
+    <%= @course.description %>
+  </div>
+  <br >
   <%= image_tag @course.image, class: 'img-responsive' %>
+  <br />
 
   <div class="col-sm-4 col-xs-12">
     <span class="label label-default">
       <%= number_to_currency @course.cost %>
     </span>
-
-    <% if current_user && current_user == @course.user && params[:as] != "student" %>
-      <br />
-      <br />
-      <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
-    <% end %>
-  </div>
-
-  <div class="col-sm-8 col-xs-12">
-    <%= @course.description %>
   </div>
 
   <div class="col-xs-12">
@@ -36,4 +32,13 @@
       </div>
     <% end %>
   </div>
+
+  <div>
+   <% if current_user && current_user == @course.user && params[:as] != "student" %>
+      <br />
+      <br />
+      <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-sm pull-right' %>
+    <% end %>
+  </div>
+
 </div>
